@@ -1,0 +1,13 @@
+.table {   
+    &__toolbar {
+        &--center {
+            justify-content: center;
+            padding-bottom: 1rem;
+        }
+    }
+    .table__body tr {
+        .td__link {
+            text-decoration: underline;
+        }
+    }
+}

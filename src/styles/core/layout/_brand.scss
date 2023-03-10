@@ -1,0 +1,56 @@
+/*
+|--------------------------------------------------------------------------
+| Brand component styles
+|--------------------------------------------------------------------------
+|
+| Here we define positioning and specific visual styles for the
+| brand component typically found on the top left of a header.
+|
+*/
+
+.brand {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  
+    &__logo {
+      width: 3rem;
+      height: 3rem;
+  
+      fill: #20ACEE;
+    }
+  
+    &__name {
+      text-transform: uppercase;
+      margin-left: .5rem;
+  
+        /**
+        * Hack for Safari and Chrome
+        * As of initial coding, Safari and Chrome seem not to be
+        * adjusting font size below 9px when using rem units.
+        */
+      font-size: 0;
+  
+      &-product {
+        font-size: 1.6rem;
+        letter-spacing: .15rem;
+        color: var(--color-grey-dark);
+  
+        margin-right: 1rem;
+      }
+  
+      &-tagline, &-company {
+        font-size: .85rem;
+        color: $color-brand;
+        letter-spacing: .05rem;
+  
+        margin-right: .25rem;
+  
+      }
+  
+      &-company {
+        color: inherit;
+      }
+    }
+  
+  }

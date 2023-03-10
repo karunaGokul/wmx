@@ -1,0 +1,172 @@
+.autocomplete {
+    position: relative;
+
+    &__input {
+        input {
+            border-radius: 20px;
+            display: block;
+            outline: none;
+            width: 100%;
+            padding: calc(var(--padding-half)) var(--padding-half);
+            background-color: $input-background;
+            border: solid 1px $input-border;
+            border-radius: 20px;
+            color: $input-text-color;
+            font-family: $font-general;
+            font-size: $input-font-size;
+            line-height: 1;
+            padding-left: 35px;
+        }
+
+        &.open {
+            input {
+                border-color: $dropdown-border-color;
+                background: $dropdown-background;
+                border-radius: 5px 5px 0 0;
+            }
+        }
+
+        &::before {
+            content: "\f002";
+            font-family: $font-icons;
+            font-weight: 700;
+            font-size: 125%;
+
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+    }
+
+    &__dropdown {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        float: left;
+        min-width: 100%;
+        padding: 0;
+        color: $dropdown-color;
+        background: $dropdown-background;
+        text-align: left;
+        list-style: none;
+        border: solid 1px $dropdown-border-color;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+
+        &.open {
+            display: block;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-top: 0;
+            box-shadow: 0 4px 2px -2px rgba($color-black, 0.2);
+        }
+
+        &-action {
+            text-align: right;
+            position: absolute;
+            top: -30px;
+            right: 10px;
+        }
+
+        &-body {
+            max-height: 250px;
+            overflow-y: auto;
+
+            ul {
+                padding: 5px 0;
+            }
+        }
+
+        &-loading {
+            padding: 4rem;
+            display: flex;
+            justify-content: center;
+        }
+
+    }
+
+    &__item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        cursor: default;
+        width: 100%;
+        padding: 0.8rem 1rem;
+        background-color: transparent;
+
+        &:hover {
+            text-decoration: none;
+            background-color: $dropdown-hover-background;
+        }
+
+        &:active {
+            text-decoration: none;
+        }
+
+        &-action {
+            margin-right: 1rem;
+
+            &.icon--remove {
+                &::before {
+                    font-family: $font-icons;
+                    font-weight: 700;
+                    content: '\f057';
+                    color: $color-red;
+                }
+            }
+
+            &.icon--select {
+                &::before {
+                    font-family: $font-icons;
+                    font-weight: 400;
+                    content: '\f0c8';
+                }
+            }
+        }
+
+        &-label {
+            padding: 2px 6px;
+            color: #fff;
+            border-radius: 4px;
+            margin-right: 6px;
+            background-color: #4186ad;
+            font-size: 1rem;
+
+            &.household {
+                background-color: #629664;
+            }
+        }
+
+        &--selected {
+            &:not(.select-all) {
+                opacity: 0.6;
+            }
+
+            .icon--select {
+                &::before {
+                    content: '\f14a';
+                }
+            }
+        }
+
+        &.select-all {
+            font-weight: 600;
+        }
+    }
+
+    &__dropdown-head {
+        background: $dropdown-hover-background;
+        max-height: 250px;
+        overflow-y: auto;
+
+        ul {
+            padding: 5px 0;
+        }
+
+        .autocomplete__item {
+            cursor: default;
+        }
+    }
+}

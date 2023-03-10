@@ -1,0 +1,59 @@
+.container {
+    width: 100%;
+    padding-right: var(--padding-half);
+    padding-left: var(--padding-half);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    clear: both;
+
+    //padding: 0 1.1rem;
+
+    >.column,
+    >[class*="column-"] {
+        width: 100%;
+        padding: 0 1.1rem;
+        flex-basis: 0;
+        flex-grow: 1;
+    }
+
+    &.no-gutters {
+
+        >.column,
+        >[class*="column-"] {
+            padding-right: 0;
+            padding-left: 0;
+        }
+    }
+
+    .column {
+        &--pull-right {
+            margin-left: auto;
+        }
+
+        @each $breakpoint in map-keys($grid-breakpoints) {
+            @include media-breakpoint-up($breakpoint) {
+                $name: breakpoint-name($breakpoint, $grid-breakpoints);
+
+                @for $column from 1 through 12 {
+                    &#{$name}-#{$column} {
+                        flex-basis: 100% / 12 * $column;
+                        max-width: 100% / 12 * $column;
+                    }
+                }
+            }
+        }
+    }
+
+    @for $i from 1 through 11 {
+        .column--offset-#{$i} {
+            margin-left: 100% / 12 * $i;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.welcome {
+  padding: $welcome-padding-top $welcome-padding-right $welcome-padding-bottom $welcome-padding-left;
+
+  &__message {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-size: $welcome-message-size;
+    opacity: 0.92;
+    margin: 0;
+  }
+
+  &__overview {
+    &-heading {
+      font-weight: 600;
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+    }
+
+    &-data {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &--money {
+        text-align: right;
+      }
+
+      &--count {
+        text-align: left;
+      }
+
+    }
+
+    &-category {
+      font-weight: 600;
+      font-size: $welcome-overview-category-size;
+      letter-spacing: .05rem;
+      margin-bottom: 0;
+    }
+
+    &-value {
+      font-weight: 700;
+      font-size: $welcome-overview-value-size;
+
+      margin-top: 2rem;
+      overflow: hidden;
+    }
+  }
+
+}

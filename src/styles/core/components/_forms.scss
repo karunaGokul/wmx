@@ -1,0 +1,128 @@
+.form {
+
+    &-field {
+        margin-bottom: $spacing/2;
+
+        label {
+            display: inline-block;
+            margin-bottom: $spacing/4;
+            font-size: 1.2rem;
+        }
+
+    }
+
+    &-input {
+
+        input, select {
+            display: block;
+            outline: none;
+            width: 100%;
+            padding: calc(var(--padding-half)) var(--padding-half);
+            background-color: $input-background;
+            border: solid 1px $input-border;
+            border-radius: $input-border-radius;
+            color: $input-text-color;
+            font-family: $font-general;
+            font-size: $input-font-size;
+            line-height: 1;
+
+            &:disabled,
+            &[readonly] {
+                opacity: $opacity-disabled;
+                cursor: no-drop;
+            }
+
+            &:not([readonly]):focus {
+                box-shadow: 0 0 .5rem darken($input-border, 10);
+            }
+
+            &::placeholder {
+                color: color-light('grey', 2);
+            }
+        }
+
+        &__search {
+            display: flex;
+            flex-direction: row;
+            position: relative;            
+            
+            input {
+                border-radius: 20px;
+                padding-left: 35px;
+            }
+    
+            &::before {
+                content: "\f002";
+                font-family: $font-icons;
+                font-size: 125%;
+                font-weight: 700;
+    
+                position: absolute;
+                left: 10px;
+                top: 10px;
+            }
+        }
+
+        &__currency {
+            display: flex;
+            flex-direction: row;
+            position: relative;            
+            
+            input {
+                padding-left: 25px !important;
+            }
+    
+            &::before {
+                content: "\f155";
+                font-family: $font-icons;
+                font-weight: 700;
+    
+                position: absolute;
+                left: 10px;
+                top: 8px;
+            }
+        }
+
+        &__group {
+            display: flex;
+            flex-direction: row;
+
+            input {
+                padding-right: 3rem;
+            }
+
+            &--icon {
+                margin-left: -2.5rem;
+                font-size: 125%;
+                color: darken($color-grey, 10) !important;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        &--dense {
+            input, select {
+                padding: calc(var(--padding-half)/2) var(--padding-half);
+            }
+
+            .form-input__group--icon {
+                font-size: 90%;
+                margin-left: -2rem;
+            }
+        }
+    }
+
+    &-textarea {
+        height: 115px;
+        line-height: 1.25;
+    }
+
+    &-checkbox {
+        display: flex;
+
+        &__label {
+            padding-left: 1rem;
+        }
+    }
+}

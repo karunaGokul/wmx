@@ -1,0 +1,9 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $name: breakpoint-name($breakpoint, $grid-breakpoints);
+
+    @each $value in $displays {
+      .display#{$name}--#{$value} { display: $value !important; }
+    }
+  }
+}

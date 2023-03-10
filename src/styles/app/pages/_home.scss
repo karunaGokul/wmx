@@ -1,0 +1,20 @@
+.before--color {
+    &-orange:before {
+        color: #f3a739;
+    }
+    &-dark-red:before {
+        color: #e53a40 !important;
+    }
+    &-blue:before {
+        color: #367FA9 !important;
+    }
+    &-purple:before {
+        color: #710691 !important;
+    }
+    &-green:before {
+        color: #629664 !important
+    }
+    &-light-green:before {
+        color: #E3ECE3 !important
+    }
+}

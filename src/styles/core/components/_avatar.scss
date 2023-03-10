@@ -1,0 +1,31 @@
+.avatar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color-brand;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: $color-white;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-large {
+        width: 80px;
+        height: 80px;
+    }
+
+    &:hover {
+        background-color: $color-blue;
+    }
+
+    &--active {
+        background-color: $color-blue;
+        opacity: 0.7;
+    }    
+}

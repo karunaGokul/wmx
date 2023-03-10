@@ -1,0 +1,84 @@
+.households {
+    .content__header {
+        margin-bottom: 2rem;
+    }
+
+    &__heading {
+        font-weight: 700;
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+
+        &-date {
+            font-weight: 300;
+        }
+    }
+    &__heading-data {
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__table {
+        tr td {
+            padding: 1rem 0;
+        }
+    }
+
+    &-fees__table {
+        .table__heading {
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+    
+            &-date {
+                font-size: 1.3rem;
+                font-weight: 300;
+            }
+        }
+        .table-sub__heading {
+
+            align-items: center;
+            margin-bottom: 2rem;
+
+            .button__group {
+                padding: 0;
+
+                .btn {
+                    height: 38px;
+                    background-color: white;
+                    border-radius: 0;
+                    margin-right: 2rem;
+                
+                   &-active {
+                        background-color: $color-grey !important;
+                        color: $color-white !important;
+                    }
+                    &:hover {
+                        border: 1px solid $color-grey;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+}
+.mx-datepicker-popup {
+    z-index: 99999999 !important;
+}
+.household--details {
+    .chart__link {
+        font-size: 1.5rem;
+        cursor: pointer;
+
+        &--active {
+            text-decoration: underline;
+            font-weight: 700;
+        }
+
+    }
+}

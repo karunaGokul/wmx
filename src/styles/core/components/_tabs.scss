@@ -1,0 +1,29 @@
+.tab {
+    display: flex;
+    justify-content: flex-end;
+
+    &__item {
+        padding: 0 1rem;
+        border-right: solid 2px $color-border;
+        cursor: pointer;
+
+        &:last-child {
+            padding-right: 0;
+            border: 0;
+        }
+
+        &.active {
+            font-weight: $font-weight-bold;
+            text-decoration: underline;
+        }
+    }
+
+    &__content {
+        padding: 2rem;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}

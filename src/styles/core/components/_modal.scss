@@ -1,0 +1,119 @@
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--margin);
+  z-index: 1000;
+
+  &.show {
+    display: flex;
+  }
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--box-shadow);
+  max-width: 100%;
+  max-height: 100%;
+  background: $color-white;
+  border-radius: var(--border-radius);
+  z-index: 99999;
+
+  &__header {
+
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    padding: 15px;
+    background: $modal-color;
+    color: $color-white;
+    line-height: 1;
+
+    font-weight: 600;
+    font-size: 1.2rem;
+
+    * {
+      margin-bottom: 0;
+      color: $color-white;
+    }
+  }
+
+  &__title {
+    font-family: $font-general;
+    font-weight: $font-weight-medium;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  &__content {
+    flex-grow: 1;
+    max-height: 100%;
+    overflow-y: auto;
+    padding-bottom: calc(var(--padding) / 2);
+    padding: $modal-content-padding;
+    line-height: 1.6;
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    p {
+      padding-bottom: var(--padding);
+    }
+
+    &-alert {
+      padding: var(--padding);
+
+      display: flex;
+
+      .alert__icon {
+        font-family: $font-icons;
+        font-weight: 700;
+        font-size: 120%;
+
+        padding-right: 1rem;
+      }
+
+      .success {
+        &::before {
+          content: '\f058';
+          color: $modal-color;
+        }
+      }
+
+       .error {
+        &::before {
+          content: '\f057';
+          color: #F51919;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 var(--padding-half) var(--padding-half) var(--padding-half);
+
+    &__item {
+      &--left {
+        margin-right: auto;
+      }
+    }
+
+    .btn {
+      margin: 0 var(--padding-half) 0 0;
+      border-color: $modal-color;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

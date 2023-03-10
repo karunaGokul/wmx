@@ -1,0 +1,27 @@
+.approve-container {
+    .table th, .table__body tr td {
+        padding: 1.5rem 0;
+    }
+    .modal {
+        &__header *, &__content {
+            color: #495765 !important;
+        }
+        
+        &__header {
+            background-color: #7DDB92;
+        }        
+        &__content {
+            padding: 2rem 6rem;
+            font-size: 1.4rem;
+            font-weight: 500;
+        }
+        &__footer {
+            justify-content: center;
+            
+            button {
+                background-color: #495765;
+                color: #ffffff;
+            }
+        }
+    }
+}

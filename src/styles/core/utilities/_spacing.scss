@@ -1,0 +1,72 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $name: breakpoint-name($breakpoint, $grid-breakpoints);
+
+    @for $i from 0 through 6 {
+      .ma#{$name} {
+        &-#{$i} {
+          margin: #{$i}rem !important;
+        }
+
+        &--x-#{$i} {
+          margin-left: #{$i}rem !important;
+          margin-right: #{$i}rem !important;
+        }
+
+        &--y-#{$i} {
+          margin-top: #{$i}rem !important;
+          margin-bottom: #{$i}rem !important;
+        }
+
+        &--top-#{$i} {
+          margin-top: #{$i}rem !important;
+        }
+
+        &--right-#{$i} {
+          margin-right: #{$i}rem !important;
+        }
+
+        &--bottom-#{$i} {
+          margin-bottom: #{$i}rem !important;
+        }
+
+        &--left-#{$i} {
+          margin-left: #{$i}rem !important;
+        }
+      }
+
+      .pa#{$name} {
+        &-#{$i} {
+          padding: #{$i}rem !important;
+        }
+
+        &--x-#{$i} {
+          padding-left: #{$i}rem !important;
+          padding-right: #{$i}rem !important;
+        }
+
+        &--y-#{$i} {
+          padding-top: #{$i}rem !important;
+          padding-bottom: #{$i}rem !important;
+        }
+
+        &--top-#{$i} {
+          padding-top: #{$i}rem !important;
+        }
+
+        &--right-#{$i} {
+          padding-right: #{$i}rem !important;
+        }
+
+        &--bottom-#{$i} {
+          padding-bottom: #{$i}rem !important;
+        }
+
+        &--left-#{$i} {
+          padding-left: #{$i}rem !important;
+        }
+      }
+
+    }
+  }
+}

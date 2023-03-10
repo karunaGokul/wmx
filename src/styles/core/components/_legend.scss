@@ -1,0 +1,28 @@
+.legend {
+    display: flex;
+    flex-direction: row;
+
+    &__item {
+        font-weight: 600;
+        padding-right: 3rem;
+        white-space: nowrap;
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+        &::before {
+            font-family: $font-icons;
+            font-weight: 700;
+            content: '\f111';
+            padding-right: 0.6rem;
+        }
+        
+        &--square {
+            &::before {
+                content: '\f45c';
+            }
+        }
+    }
+
+}

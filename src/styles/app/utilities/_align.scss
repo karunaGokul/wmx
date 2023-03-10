@@ -1,0 +1,3 @@
+@each $value in $align {
+    .align--#{$value} { align-items: $value !important; }
+  }

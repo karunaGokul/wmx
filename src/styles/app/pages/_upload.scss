@@ -1,0 +1,143 @@
+.table--editable {
+    th {
+        font-size: 1.2rem;
+    }
+
+    .table {
+        &__selector
+        {
+            width: 13px;
+            height: 13px;
+        }
+
+        &__row {
+            td {
+                padding: 0;
+            }
+
+            input[type='text'],
+            input[type='number'],
+            select {
+                padding: 0.9rem 0.6rem;
+                width: 100%;
+                border: solid 1px $color-border;
+                background-color: $input-background;
+                font-size: 12px;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            select {
+                padding: 0.8rem 0.5rem;
+            }
+
+            .mx-input {
+                border-radius: 0;
+                height: auto;
+                line-height: 1;
+            }
+
+            .mx-datepicker {
+                width: auto;
+            }
+
+            .mx-icon-calendar {
+                display: none;
+            }
+
+            &--new {
+                td {
+                    //padding: 0.8rem 1rem;
+                    //border-color: #005687;
+                    background-color: #F0F9FD;
+                }
+
+                input[type='text'],
+                input[type='number'],
+                select {
+                    border: solid 1px #005687;
+                    background-color: $color-white;
+                }
+            }
+
+        }
+
+        &__cell {
+            &--error {
+                background-color: $color-red;
+                color: $color-white;
+
+                &, &-duplicate {
+                    input[type='text'], 
+                    input[type='number'] {
+                        border: solid 1px $color-red;
+                        background-color: $color-red;
+                        color: $color-white;
+                    }
+                }
+            }
+
+
+
+            &-value {
+                width: 88px;
+                margin: 0.5rem 0.35rem;
+
+            }
+            &--value-big{
+                width: 140px;
+                margin: 0.5rem 0.35rem;
+
+            }
+
+            &-control {
+                height: 34px;
+            }
+
+            &-label {
+                padding: 1rem 0.5rem;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                height: 34px;
+            }
+        }
+
+        &__foot {
+            td {
+                border: 0;
+            }
+        }
+    }
+}
+
+.upload {
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: $font-weight-medium;
+    }
+
+    &__info {
+        li {
+            padding-bottom: 1rem;
+
+            label {
+                font-weight: 600;
+            }
+        }
+    }
+
+    &__icon {
+        cursor: pointer;
+        font-size: 6rem;
+
+        &--large {
+            font-size: 20rem;
+            cursor: pointer;
+        }
+    }
+}

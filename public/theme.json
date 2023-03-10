@@ -1,0 +1,45 @@
+{
+    "apiUrl": "https://rmwm-yqa02-wmx.redi2.com/wmx",
+    "apiPath": "api/v1",
+    "wmeApiUrl": "https://yqa02.redi2.com/wmews",
+    "wmeApiPath": "api/v1",
+    "keycloakUrl": "https://keycloak.redi2.com:8443/auth/",
+    "keycloakClientId": "wmXplorer",
+    "keycloakRealm": "WME-Dev",
+    "gridPageSize": 100,
+    "logo": "/dynasty-logo.png",
+    "styles": [
+        {
+            "name": "background-color",
+            "value": "#1A2035"
+        },
+        {
+            "name": "secondary-color",
+            "value": "#364371"
+        }
+    ],
+    "help": {
+        "1": "<p>Total gross revenue for the calendar billing period, calculated by summing 'Needs your approval', 'Approved', 'Pending Payment', and 'Paid'. All values are prior to Dynasty deduction of applicable fees.</p>",
+        "2": "<p>Percentage change in total gross revenue from previous calendar billing period.</p>",
+        "3": "<p>Outstanding (or waived/exempted) billing in calendar billing period.</p><ul><li><i>Needs your approval:</i> Billing items that need firm approval before Dynasty can debit/credit accounts.</li><li><i>Approved:</i> Billing items approved for debiting/crediting, but not yet debited/credited at custodian.</li><li><i>Waived/Exempted:</i> Only advisory fees can be waived/exempted. Program, Manager, and Core fees cannot be exempted and removed from billing file.</li></ul>",
+        "4": "<p>Status of billing in process of debiting/crediting.</p><ul><li><i>Pending payment:</i> Fees that are pending processing at the custodian (e.g., creating custodian extracts, pending at custodian, waiting on rejections)</li><li><i>Paid:</i> Fees processed at the custodian and sent to Dynasty Finance for net payment (debis/credits).</li><li><i>Rejected:</i> Fees that have not been processed at the custodian due to various reasons and require further action.</li></ul>",
+        "5": "<p>Quarter over quarter on-cycle trend analysis, depicting current quarter along with the previous 4 quarters.</p>",
+        "6": "<p>Quarter over quarter adjustment billing trend analysis, broken out by billing type:<p><ul><li><i>New Accounts/Contributions:</i> Includes contributions > $50k threshold, new account billing, and reactivation of accounts.</li><li><i>Terminations/Withdrawals:</i> Includes withdrawals > $50k threshold and termination of accounts from billing.</li><li><i>Adjustments</i> Includes any fee changes or program changes.</li></ul>",
+        "7": "<p>Total client advisory fees for the household in selected calendar billing period, calculated by summing billing from on-cycle, new accounts, deposits, and net positive adjustments and reducing by any credits for withdrawals, terminations, and net negative adjustments. All values are prior to Dynasty deduction of applicable fees.</p>",
+        "8": "<p>Account-level breakdown for the household, showing client advisory fee information (fees, total and excluded assets, and annualized effective rates) related to the selected calendar billing period.</p>",
+        "9": "<p>Account Market Value for the day of the flow</p>"
+    },
+    "legalContent": "<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In ante metus dictum at tempor commodo. Tellus in hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Convallis posuere morbi leo urna molestie. Quis auctor elit sed vulputate mi sit. Massa sapien faucibus et molestie ac. Morbi leo urna molestie at elementum eu facilisis. </p> <p> convallis aenean et tortor. Nec nam aliquam sem et tortor consequat id porta. Vehicula ipsum a arcu cursus vitae congue mauris rhoncus. Nam libero justo laoreet sit amet cursus sit. Amet massa vitae tortor condimentum lacinia quis. Massa placerat duis ultricies lacus. Lacus vestibulum sed arcu non odio. Ut eu sem integer vitae justo. Eu feugiat pretium nibh ipsum consequat nisl. Placerat orci nulla pellentesque dignissim enim sit amet venenatis. Morbi tristique senectus et netus. A diam maecenas sed enim ut sem. Lacinia at quis risus sed vulputate odio ut enim. Egestas quis ipsum suspendisse ultrices gravida dictum. Consequat interdum varius sit amet mattis vulputate enim. Ut porttitor leo a diam sollicitudin tempor id eu. Dictumst quisque sagittis purus sit amet. Commodo ullamcorper a lacus vestibulum sed arcu non odio euismod. Eget nullam non nisi est sit amet. Lobortis scelerisque fermentum dui faucibus in ornare quam viverra orci. Quam id leo in vitae turpis massa. </p> <p> Eget dolor morbi non arcu risus quis varius. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. Tristique et egestas quis ipsum. Pretium fusce id velit ut tortor pretium viverra. Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque sit. Pellentesque habitant morbi tristique senectus et netus et malesuada. Sed arcu non odio euismod lacinia at quis risus sed. At tempor commodo ullamcorper a. Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo. Sit amet nisl purus in. Etiam non quam lacus suspendisse faucibus interdum posuere lorem. Enim nec dui nunc mattis enim ut tellus elementum sagittis. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Accumsan tortor posuere ac ut consequat. </p>",
+    "billingEvent": {
+        "OnCycle": "On Cycle",
+        "Inception": "Inception",
+        "Termination": "Termination",
+        "Deposit": "Contribution",
+        "Withdrawal": "Withdrawal",
+        "PPChange": "Program/Product change",
+        "SleeveChange": "Sleeve change",
+        "MSChange": "Manager/Style change",
+        "ManualFee": "Manual Fee"
+    },
+    "paymentAccountsPage":true
+}

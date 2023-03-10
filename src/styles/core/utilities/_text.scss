@@ -1,0 +1,55 @@
+.text {
+  &-nowrap {
+    white-space: nowrap;
+  }
+
+  &--align {
+    &-left {
+      text-align: left !important;
+    }
+
+    &-center {
+      text-align: center !important;
+    }
+
+    &-right {
+      text-align: right !important;
+    }
+  }
+
+  &--size {
+    @for $i from 1 through 4 {
+      &-#{$i} {
+        font-size: #{$i}rem !important;
+      }
+
+      @for $j from 1 through 9 {
+        &-#{$i}-#{$j} {
+          font-size: #{$i}#{'.'}#{$j}rem !important;
+        }
+      }
+    }
+  }
+
+  &--weight {
+    &-black {
+      font-weight: $font-weight-black;
+    }
+
+    &-bold {
+      font-weight: $font-weight-bold;
+    }
+
+    &-medium {
+      font-weight: $font-weight-medium;
+    }
+
+    &-regular {
+      font-weight: $font-weight-regular;
+    }
+
+    &-light {
+      font-weight: $font-weight-light;
+    }
+  }
+}

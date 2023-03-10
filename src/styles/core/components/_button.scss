@@ -1,0 +1,156 @@
+.btn {
+
+  /**
+    * Establishing defaults that apply for buttons as well as link and visited pseudo classes
+    * link: pseudo class to control when button functions as an anchor element
+    * visited: pseudo class to control when user has clicked the anchor element once before
+    */
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    padding: $button-padding-y $button-padding-x;
+    display: inline-block;
+    border-radius: $button-border-radius;
+    font-size: $button-font-size;
+    font-weight: $button-font-weight;
+    letter-spacing: .05rem;
+    cursor: pointer;
+
+    color: $color-grey;
+
+    background-color: $color-white;
+    border: 1px solid $color-border; 
+
+    box-shadow: none;
+    outline: none;
+    white-space: nowrap;
+  }
+
+  &:hover {
+    /**
+      * Here we create a simple effect that provides some depth to the button
+      * Specifically, we move the button up a tiny bit and give it some drop shadow
+      */
+    transform: translateY($button-hover-transition);
+    box-shadow: $button-hover-shadow;
+
+    background-color: lighten($color-grey, 60);
+  }
+
+  &:active {
+    /**
+      * Once the button is clicked, we want to provide some feedback.
+      * Specifically, we move the button down a tiny bit to create a pressing illusion.
+      * We also back-off on the drop shadow once it is clicked
+      */
+    transform: translateY(-1px);
+    box-shadow: var(--box-shadow);
+  }
+
+  &--primary {
+    &,
+    &:link,
+    &:visited {
+      background-color: $color-primary;
+      color: $color-white;
+
+      &:hover {
+        background-color: darken($color-primary, 5);
+      }
+    }
+  }
+
+  &--secondary {
+    &,
+    &:link,
+    &:visited {
+      background-color: $color-secondary;
+      color: $color-white;
+
+      &:hover {
+        background-color: darken($color-secondary, 5);
+      }
+    }
+  }
+
+  &--tertiary {
+    &,
+    &:link,
+    &:visited {
+      background-color: $color-tertiary;
+      color: $color-white;
+
+      &:hover {
+        background-color: darken($color-tertiary, 5);
+      }
+    }
+  }
+
+  &--animated {
+    // adding a .75s delay before starting animation
+    animation: moveInBottom 0.5s ease-out 0.3s;
+
+    // the property below automatically applies the styles of the 0% before the animation starts
+    animation-fill-mode: backwards;
+  }
+
+  &--outline {
+    background-color: transparent;
+    border: solid 1px $color-border;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+
+  &--inline {
+    border: none;
+    text-decoration: none;
+    color: $color-grey;
+    font-size: 1.2rem;
+    padding: 1px;
+    cursor: pointer;
+    transition: all .2s;
+    text-decoration: underline;
+
+    background-color: transparent;
+
+    &:hover {
+      color: $color-link-hover;
+      background-color: transparent;
+      box-shadow: none;
+      text-decoration: underline;
+    }
+
+    &:active {
+      outline: 0;
+      color: var(--color-primary-dark);
+      transform: translateY(1px) scale(1.05);
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  &--icon {
+    &::before {
+      font-family: $font-icons;
+      font-weight: 700;
+    }
+  }
+
+  &--small {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+  }
+
+  &--disabled, &[disabled] {
+    opacity: $opacity-disabled;
+    cursor: no-drop;
+  }
+
+}

@@ -1,0 +1,19 @@
+.footer {
+    text-align: center;
+    letter-spacing: .02rem;
+    font-size: 1.1rem;
+
+    background: $footer-background;
+
+    padding: $footer-padding-top $footer-padding-right $footer-padding-bottom $footer-padding-left;
+
+    &__menu {
+        font-size: 1.2rem;
+    }
+
+    &__legal {
+        font-weight: 500;
+
+        margin: 2rem 0;
+    }
+}

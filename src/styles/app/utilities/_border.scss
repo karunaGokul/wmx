@@ -1,0 +1,8 @@
+    
+    .border-bottom__bold {
+      border-bottom: 2px solid $color-primary !important;
+  
+      &-none {
+        border-bottom: none !important;
+      }
+    }

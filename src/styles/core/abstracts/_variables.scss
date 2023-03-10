@@ -1,0 +1,154 @@
+$font-general: 'Open Sans', Arial, Helvetica, sans-serif !default;
+$font-headings: 'Libre Baskerville', Arial, Helvetica, sans-serif !default;
+$font-icons: 'Font Awesome 5 Free' !default;
+
+$base-font-size: 1.6rem !default; 
+$base-line-height: 1 !default; 
+
+$color-blue: #367fa9 !default;
+$color-green: #55B948 !default;
+$color-red: #ec6d71 !default;
+$color-grey: #5F5F5F !default;
+
+$color-white: #ffffff !default;
+$color-black: #000000 !default;
+$color-brand: #00AAE7 !default;
+
+$color-primary: $color-blue !default;
+$color-secondary: $color-green !default;
+$color-tertiary: $color-red !default;
+
+$colors-base: 
+(
+  "primary":    $color-primary,
+  "secondary":  $color-secondary,
+  "tertiary":   $color-tertiary
+) !default;
+
+$colors: 
+(
+  "blue": (
+    hue:          var(--color-blue-h), 
+    saturation:   var(--color-blue-s), 
+    lightness:    var(--color-blue-l)
+  ),
+  "green": (
+    hue:          var(--color-green-h),  
+    saturation:   var(--color-green-s), 
+    lightness:    var(--color-green-l)
+  ),
+  "red": (
+    hue:          var(--color-red-h), 
+    saturation:   var(--color-red-s), 
+    lightness:    var(--color-red-l)
+  ),
+  "grey": (
+    hue:          var(--color-grey-h), 
+    saturation:   var(--color-grey-s), 
+    lightness:    var(--color-grey-l)
+  ),
+) !default;
+
+$body-background: transparent !default;
+$content-background: transparent !default;
+
+$color-body: $color-grey !default;
+$color-heading: $color-grey !default;
+$color-link: $color-grey !default;
+$color-border: #e9ecef !default;
+$color-link-hover: rgba($color-black, 0.75) !default;
+$color-loading: #9880ff !default;
+
+$table-background: $color-grey !default;
+$table-color: $color-grey !default;
+$table-head-background: lighten($color-primary, 40) !default;
+$table-border: lighten($table-color, 45) !default;
+$table-row-background: $table-color !default;
+$table-alt-row-background: lighten($color-primary, 50) !default;
+$table-row-hover-background: lighten($color-grey, 60) !default;
+$table-foot-load-background: rgba(#ebf8fe, .75) !default;
+$table-padding-x: 1rem !default;
+$table-padding-y: 1.4rem !default;
+$table-heading-size: 2.25rem !default;
+
+$spacing: 2rem !default;
+$padding: 2rem !default;
+$border-radius: .5rem !default;
+$box-shadow: 0 0 .4rem 0 rgba($color-black, 0.2) !default;
+$opacity-disabled: 0.6 !default;
+$modal-content-padding: $padding !default;
+$modal-color: $color-primary !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$displays: none, inline, inline-block, block, table, table-row, table-cell, flex, inline-flex !default;
+$positions: relative, absolute, fixed !default;
+$floats: none, left, right !default;
+
+$header-padding-top: 2rem !default; 
+$header-padding-right: .5rem !default; 
+$header-padding-bottom: 2rem !default; 
+$header-padding-left: .5rem !default; 
+$header-background: transparent !default;
+$header-box-shadow: none !default;
+$header-nav-text-color: #c8c8c8 !default;
+$header-nav-active-text-color: $color-link !default;
+$header-position: static !default;
+$header-nav-font-size: 1.5rem !default;
+$header-logo-height: auto !default;
+
+$footer-padding-top: 1rem !default; 
+$footer-padding-right: 0 !default; 
+$footer-padding-bottom: 1rem !default; 
+$footer-padding-left: 0 !default; 
+$footer-background: transparent !default;
+
+$content-padding-top: 0 !default;
+$content-padding-right: 0 !default;
+$content-padding-bottom: 0 !default;
+$content-padding-left: 0 !default;
+
+$welcome-padding-top: 2rem !default;
+$welcome-padding-right: 0 !default;
+$welcome-padding-bottom: 2rem !default;
+$welcome-padding-left: 0 !default;
+$welcome-message-size: 3.6rem !default;
+$welcome-overview-category-size: 1.4rem !default;
+$welcome-overview-value-size: 2.2rem !default;
+
+$heading-font-sizes: 3.6rem, 3rem, 2rem, 1.5rem !default;
+$font-weight-black: 800 !default;
+$font-weight-bold: 700 !default;
+$font-weight-medium: 600 !default;
+$font-weight-regular: 400 !default;
+$font-weight-light: 300 !default;
+
+$body-font-weight: $font-weight-regular !default;
+
+$button-border-radius: .75rem !default;
+$button-padding-x: 2rem !default;
+$button-padding-y: 1rem !default;
+$button-hover-transition: 0 !default;
+$button-hover-shadow: $box-shadow !default;
+$button-font-size: 1.4rem !default;
+$button-font-weight: inherit !default;
+
+$input-background: rgba(#ebf8fe, .75) !default;
+$input-border: lighten($color-grey, 30) !default;
+$input-border-radius: 0.5rem !default;
+$input-text-color: darken($color-grey, 10) !default;
+$input-font-size: 1.2rem;
+
+$dropdown-background: $color-white !default;
+$dropdown-color: $color-grey !default;
+$dropdown-padding-y: 0.5rem !default;
+$dropdown-border-color: $color-border !default;
+$dropdown-item-padding-y: 1rem !default;  
+$dropdown-item-padding-x: 2rem !default;
+$dropdown-hover-background: lighten($color-grey, 60) !default;

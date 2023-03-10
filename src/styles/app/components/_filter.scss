@@ -1,0 +1,14 @@
+.filter {
+    &-summary {
+        &__item {
+            i {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.grab-handle {
+    color: #e9ecef; 
+    cursor: grab;
+}

@@ -1,0 +1,25 @@
+.app__emboss {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.6;
+    z-index: -1;
+    margin: 0 auto;
+
+    .row {
+        height: 100%;
+    }
+
+    &--filler {
+        background-color: lighten($color-brand, 50) !important;
+        height: 100%;
+    }
+}
+
+.app_embossed {
+    .footer {
+        background: none;
+    }
+}

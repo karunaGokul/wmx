@@ -1,0 +1,18 @@
+// html, body {
+//   height: 100%;
+// }
+
+html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-family: $font-general;
+    font-weight: $body-font-weight;
+    color: $color-body;
+    height: 100vh;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+
+    background-color: $body-background;
+  }

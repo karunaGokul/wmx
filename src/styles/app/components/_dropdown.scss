@@ -1,0 +1,16 @@
+.header-dropdown {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    padding-right: 3rem;
+
+    .dropdown-toggle, .dropdown-item--active {
+        font-weight: 700;
+    }
+    .dropdown-menu {
+        left: -27px;
+        max-height: 400px;
+        overflow: auto;
+    }
+
+}

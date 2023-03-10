@@ -1,0 +1,42 @@
+:root {
+  --color-blue-h: 202;
+  --color-blue-s: 52%;
+  --color-blue-l: 44%;
+
+  --color-green-h: 113;
+  --color-green-s: 45%;
+  --color-green-l: 50%;
+
+  --color-red-h: 358;
+  --color-red-s: 77%;
+  --color-red-l: 68%;
+
+  --color-grey-h: 0;
+  --color-grey-s: 0%;
+  --color-grey-l: 37%;
+
+  @each $color,
+  $value in $colors-base {
+    --color-#{$color}: #{$value};
+    --color-#{$color}-light: #{lighten($value, 15%)};
+    --color-#{$color}-lighter: #{lighten($value, 30%)};
+    --color-#{$color}-lightest: #{lighten($value, 45%)};
+
+    --color-#{$color}-dark: #{darken($value, 15%)};
+    --color-#{$color}-darker: #{darken($value, 30%)};
+    --color-#{$color}-darkest: #{darken($value, 45%)};
+  }
+
+  --color-heading: #{$color-heading};
+  --color-link: #{$color-link};
+  --color-link-hover: #{$color-link-hover};
+  --color-border: #{$color-border};
+
+  --margin: #{$spacing};
+  --margin-half: calc(var(--margin) / 2);
+  --padding: #{$padding};
+  --padding-half: calc(var(--padding) / 2);
+  --border-radius: #{$border-radius};
+  --box-shadow: #{$box-shadow};
+
+}

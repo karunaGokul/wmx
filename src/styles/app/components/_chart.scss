@@ -1,0 +1,71 @@
+.chart {
+  &__label {
+    font-weight: 700;
+    color: #5F5F5F;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 2rem;
+  }
+
+  &__data {
+    height: 350px;
+  }
+
+  &__empty,
+  .highcharts-no-data {
+    opacity: 0.3;
+  }
+
+  &-section {
+    margin-bottom: 6rem;
+
+    &__title {
+      font-size: 24px;
+      font-weight: $font-weight-bold;
+
+      display: flex;
+      align-items: center;
+
+      .help {
+        margin-left: 1rem;
+      }
+    }
+
+    &__subtitle {
+      font-size: 20px;
+      font-weight: $font-weight-medium;
+    }
+  }
+}
+
+.highcharts-root {
+  margin-top: 4px;
+
+  .highcharts-series {
+    rect {
+      opacity: 0.5;
+    }
+
+    rect:nth-child(1) {
+      opacity: 1;
+    }
+
+    rect:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.highcharts-xaxis-labels {
+  top: 14px !important;
+
+  .xaxis-label {
+    padding: 10px 20px;
+    font-size: 12px;
+
+    &--active {
+      color: #566273 !important;
+      font-weight: 700;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@for $i from 1 through 4 {
+  .heading-#{$i}, h#{$i} {
+    margin: 0;
+    padding: 0;
+    margin-bottom: $spacing/$i;
+    font-family: $font-headings;
+    font-weight: 700;
+    color: $color-heading;
+    font-size: nth($heading-font-sizes, $i);
+  }
+}
+
+a {
+  color: $color-link;
+  text-decoration: none;
+}
+
+sup, .sup {
+  position: relative; 
+  top: -0.3rem; 
+  font-size: 1.25rem;
+  vertical-align: text-top;
+}

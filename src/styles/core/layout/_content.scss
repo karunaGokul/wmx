@@ -1,0 +1,36 @@
+.content {
+    width: 100%;
+    display: block;
+
+    margin-right: auto;
+    margin-left: auto;
+
+    padding: $content-padding-top $content-padding-right $content-padding-bottom $content-padding-left;
+}
+
+.site {
+    &__wrapper {
+        margin: 0 auto;
+        background-color: $content-background;
+
+        &,
+        .app__emboss {
+            max-width: 1800px;
+        }
+
+        .content {
+            min-height: 90vh;
+        }
+
+        &.fix--footer {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+
+            .content {
+                flex: 1;
+                min-height: auto;
+            }
+        }
+    }
+}

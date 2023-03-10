@@ -1,0 +1,72 @@
+.bg--color-white {
+    background: #ffffff;
+}
+
+.text--color-white {
+    color: #ffffff;
+}
+
+.before--color-white::before {
+    background: #ffffff;
+}
+
+@each $color,
+$value in $colors {
+    $hue: map-get($value, hue);
+    $saturation: map-get($value, saturation);
+    $lightness: map-get($value, lightness);
+
+    .bg--color-#{$color} {
+        background: hsl(#{$hue}, #{$saturation}, calc(#{$lightness})) !important;
+
+        @for $i from 1 through 10 {
+            $percent: ($i * 3) + '%';
+
+            &.darken-#{$i} {
+                background: hsl(#{$hue}, #{$saturation}, calc(#{$lightness} - #{$percent})) !important;
+            }
+
+            &.lighten-#{$i} {
+                background: hsl(#{$hue}, #{$saturation}, calc(#{$lightness} + #{$percent})) !important;
+            }
+        }
+    }
+
+    .text--color-#{$color} {
+        color: hsl(#{$hue}, #{$saturation}, calc(#{$lightness})) !important;
+
+        @for $i from 1 through 10 {
+            $percent: ($i * 3) + '%';
+
+            &.darken-#{$i} {
+                color: hsl(#{$hue}, #{$saturation}, calc(#{$lightness} - #{$percent})) !important;
+            }
+
+            &.lighten-#{$i} {
+                color: hsl(#{$hue}, #{$saturation}, calc(#{$lightness} + #{$percent})) !important;
+            }
+        }
+    }
+
+    .before--color-#{$color} {
+        &::before {
+            color: hsl(#{$hue}, #{$saturation}, calc(#{$lightness})) !important;
+        }
+
+        @for $i from 1 through 10 {
+            $percent: ($i * 3) + '%';
+
+            &.darken-#{$i} {
+                &::before {
+                    color: hsl(#{$hue}, #{$saturation}, calc(#{$lightness} - #{$percent})) !important;
+                }
+            }
+
+            &.lighten-#{$i} {
+                &::before {
+                    color: hsl(#{$hue}, #{$saturation}, calc(#{$lightness} + #{$percent})) !important;
+                }
+            }
+        }
+    }
+}

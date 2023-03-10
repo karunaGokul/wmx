@@ -1,0 +1,62 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $name: breakpoint-name($breakpoint, $grid-breakpoints);
+
+    .flex#{$name}--wrap {
+      flex-wrap: wrap !important;
+    }
+
+    .flex#{$name}--nowrap {
+      flex-wrap: nowrap !important;
+    }
+
+    .align-items#{$name}--start {
+      align-items: flex-start !important;
+    }
+
+    .align-items#{$name}--end {
+      align-items: flex-end !important;
+    }
+
+    .align-items#{$name}--center {
+      align-items: center !important;
+    }
+
+    .align-items#{$name}--baseline {
+      align-items: baseline !important;
+    }
+
+    .align-items#{$name}--stretch {
+      align-items: stretch !important;
+    }
+
+    .justify-content#{$name}--start {
+      justify-content: flex-start !important;
+    }
+
+    .justify-content#{$name}--end {
+      justify-content: flex-end !important;
+    }
+
+    .justify-content#{$name}--center {
+      justify-content: center !important;
+    }
+
+    .justify-content#{$name}--between {
+      justify-content: space-between !important;
+    }
+
+    .justify-content#{$name}--around {
+      justify-content: space-around !important;
+    }
+
+  }
+}
+
+.no-flex-wrap {
+  flex-wrap: nowrap;
+}
+
+.no-flex-basis {
+  flex-basis: 0% !important;
+}

@@ -1,0 +1,46 @@
+/*
+|
+| Here we perform a reset via the universal selector, as well as define
+| key default properties, including the box sizing and font size.
+|
+*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+
+ // Generally considered best practice to *not* set box-sizing property in universal selector.
+  box-sizing: inherit;
+}
+
+body {
+  // Best practice is to set box-sizing in the body element and get all elements to inherit it via the universal selector.
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ol, ul {
+  list-style: none;
+  width: auto;
+
+  li {
+      list-style: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+::selection {
+  background-color: var(--color-primary-light);
+  color: $color-black;
+}
